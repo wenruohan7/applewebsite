@@ -1,6 +1,7 @@
 .body {
     width: 100%;
     margin: 0;
+    font-family: 'inter';
 }
 
 
@@ -8,12 +9,14 @@
 .sec1 {
     background-image: url(./Figure.png);
     background-size: cover;
-    height: 692px;
+   width: 100%;
     background-position: center;
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
+    height: auto;
+    min-height: 500px;
 }
 
 .navigation {
@@ -52,7 +55,7 @@
     align-items: center;
     gap: 4px;
     text-align: center;
-    width: 1920px;
+    width: 100%;
 }
 
 .desctext {
@@ -855,5 +858,67 @@
     line-height: 40px;
     right: 10px;
     display: flex;
+
+}
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .navigation {
+        gap: 12px;
+        font-size: 10px;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    /* Hero sections height smaller */
+    .sec1,
+    .sec2,
+    .sec3 {
+        height: 500px;
+        background-position: center;
+    }
+
+    /* Hero text smaller */
+    .text1 {
+        font-size: 32px;
+    }
+
+    .text2 {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    /* Grid becomes 1 column instead of 2 */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        height: 450px;
+    }
+
+    /* Text overlays narrower */
+    .textframe1,
+    .textframe2,
+    .textframe4,
+    .textframe5,
+    .textframe6,
+    .textframe7 {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Scroll movies smaller */
+    .movie {
+        min-width: 768px;
+        height: 500px;
+    }
+
+    .movie1 {
+        min-width: 300px;
+        height: 200px;
+    }
 
 }
